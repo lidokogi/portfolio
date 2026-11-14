@@ -1162,6 +1162,11 @@
       height: 110px;
     }
 
+    .reading-layout { grid-template-columns: 1fr; }
+    .reading-layout > div:first-child { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .book-row { grid-template-columns: 1fr; gap: 0.75rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: 14px; transition: border-color 0.3s, transform 0.3s; }
+    .book-row:hover { border-color: rgba(200, 245, 74, 0.35); transform: translateY(-3px); }
+
     /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
@@ -1222,6 +1227,9 @@
       line-height: 1.1;
       
     }
+
+      .reading-layout > div:first-child { grid-template-columns: 1fr; gap: 0.75rem; }
+      .book-row { padding: 1.25rem; }
 
       .logo {
         font-size: 1.3rem;
@@ -1557,7 +1565,7 @@
         <a href="#learning" class="card" style="animation-delay: 0.5s">
           <div>
             <div class="card-tag">Growth</div>
-            <h3>Prep & Experience</h3>
+            <h3>Prep & Learning</h3>
             <p>The courses, interview prep, and past roles taking me from CS student to product and solutions roles.</p>
           </div>
           <div class="card-go">See the path <span>↗&#xFE0E;&#xFE0E;</span></div>
@@ -1798,7 +1806,7 @@
           <div class="section-label">Product thinking in public</div>
           <div class="section-title">Product Teardowns & Feature Dives</div>
         </div>
-        <p class="section-sub">I analyze real products the way a Product Manager would: identifying user problems,
+        <p class="section-sub">I analyze new features for real products: identifying user problems,
           diagnosing what's working and what isn't, and proposing solutions with clear success metrics. Click on any
           card to view.</p>
       </div>
@@ -1926,7 +1934,7 @@
               <div class="book-title"><a href="https://www.codepath.org/courses/applied-ai-engineering" target="_blank"
                   rel="noopener">Applied AI Engineering ↗&#xFE0E;</a></div>
               <div class="book-author">CodePath · 10 weeks · Virtual</div>
-              <div class="book-note">Building fluency in AI-native development to speak credibly about technical tradeoffs with engineers and customers, rapid prototyping, AI-assisted workflows, and shipping in modern
+              <div class="book-note">Building fluency in AI-native development to speak credibly about technical tradeoffs with engineers and customers: rapid prototyping, AI-assisted workflows, and shipping in modern
                 engineering environments.</div>
             </div>
           </div>
@@ -1936,7 +1944,7 @@
               <div class="book-title"><a href="https://www.codepath.org/courses/tech-interview-prep" target="_blank"
                   rel="noopener">Technical Interview Prep ↗&#xFE0E;</a></div>
               <div class="book-author">CodePath · 10 weeks · Virtual</div>
-              <div class="book-note">Sharpening the computer fundamentals that that product and engineering roles demand: algorithms, data
+              <div class="book-note">Sharpening the computer fundamentals that product and engineering roles demand: algorithms, data
                 structures, and structured problem solving under pressure.</div>
             </div>
           </div>
@@ -1947,52 +1955,6 @@
               <div class="book-author">Exponent</div>
               <div class="book-note">Targeted practice for APM interviews: product design, metrics, and estimation
                 questions with mock interviews to build reps before recruiting season.</div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="sidebar-label">Experience</div>
-          <div class="journey-list">
-            <div class="journey-entry">
-              <div class="j-dot"></div>
-              <div>
-                <div class="j-date">2025</div>
-                <div class="j-role">Software Product Engineer</div>
-                <div class="j-org">Google Summer of Code · PSF</div>
-              </div>
-            </div>
-            <div class="journey-entry">
-              <div class="j-dot"></div>
-              <div>
-                <div class="j-date">May 2025</div>
-                <div class="j-role">Tech Week Ambassador</div>
-                <div class="j-org">a16z · New York</div>
-              </div>
-            </div>
-            <div class="journey-entry">
-              <div class="j-dot"></div>
-              <div>
-                <div class="j-date">Jan – May 2025</div>
-                <div class="j-role">Technical Developer</div>
-                <div class="j-org">Women in Tech Society · Western</div>
-              </div>
-            </div>
-            <div class="journey-entry">
-              <div class="j-dot"></div>
-              <div>
-                <div class="j-date">May 2025</div>
-                <div class="j-role">BEL Intern</div>
-                <div class="j-org">Bain & Company · Toronto</div>
-              </div>
-            </div>
-            <div class="journey-entry">
-              <div class="j-dot"></div>
-              <div>
-                <div class="j-date">Jul – Sep 2024</div>
-                <div class="j-role">Software Engineering Fellow</div>
-                <div class="j-org">Headstarter AI</div>
-              </div>
             </div>
           </div>
         </div>
