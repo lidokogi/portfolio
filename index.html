@@ -490,6 +490,8 @@
       flex-wrap: wrap;
     }
 
+    .shuttle-links-mobile { display: none; }
+
     .shuttle-text-grid .bp-responsibilities {
       margin-top: -70px;
       padding-left: 3rem;
@@ -1215,7 +1217,8 @@
       .logo {
         font-size: 1.3rem;
       }
-
+      .shuttle-links-desktop { display: none; }
+      .shuttle-links-mobile { display: flex; justify-content: center; margin: 1.25rem 0 0; }
       .hamburger {
         display: flex;
         flex-direction: column;
@@ -1595,6 +1598,7 @@
                 <div class="bp-resp-item">Live shuttle position on an interactive map, refreshed every 30 seconds</div>
                 <div class="bp-resp-item">Trip planner that ranks shuttle + walking route combinations by total time
                 </div>
+                <div class="bp-resp-item">Shuttle status that updates as it approaches (arriving, arrived, departed), so you always know whether you’ve missed it or not</div>
                 <div class="bp-resp-item">Step-by-step live guidance screen that updates in real time as the trip
                   progresses</div>
                 <div class="bp-resp-item">Live ETA overlay on full schedules, with weekday/weekend auto-detection</div>
@@ -1632,6 +1636,15 @@
             <span class="phone-dot"></span>
           </div>
           <div class="phone-caption" id="shuttle-caption">Live Map View</div>
+                    <div class="phone-caption" id="shuttle-caption">Live Map View</div>
+                    
+                    <div class="shuttle-links shuttle-links-mobile">
+                      <a href="https://daffy-carrot-d1e.notion.site/UAlbany-Shuttle-Tracker-37b88b501c828043a470ed00e8d21efa?source=copy_link"
+                        target="_blank" class="prd-open-btn">Read the full PRD ↗&#xFE0E;</a>
+                      <a href="https://daffy-carrot-d1e.notion.site/shuttle-app-build-and-decision-log-38588b501c828023ace2de62c127131c?source=copy_link"
+                        target="_blank" class="prd-open-btn">Read the build log ↗&#xFE0E;</a>
+                    </div>
+                    <div class="shuttle-links shuttle-links-desktop"></div>
         </div>
 
       </div>
