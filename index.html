@@ -19,6 +19,7 @@
       margin: 0;
       padding: 0;
     }
+    .explore { scroll-margin-top: 5rem; }
 
     :root {
       --bg: #0e0e0e;
@@ -1485,7 +1486,7 @@
           <p class="hero-desc">Documenting my journey into product and solutions work as I build the technical depth, customer empathy, and judgment to
           create products people rely on.</p>
           <div class="hero-ctas">
-            <a href="#projects" class="btn-solid">See my work</a>
+            <a href="#explore" class="btn-solid">See my work</a>
             <a href="#contact" class="btn-outline">Let's connect</a>
             <a href="Lucille_Idokogi_Resume.pdf" target="_blank" class="btn-outline">Resume ↗</a>
           </div>
@@ -1496,7 +1497,9 @@
       </div>
     </div>
 
-    <div class="explore">
+  <div style="height: 1px; background-color: var(--border); margin: 20px 0;"></div>
+
+    <div class="explore" id="explore">
       <div class="section-label">Explore the portfolio</div>
       <div class="cards">
 
@@ -2039,16 +2042,23 @@
   <script>
     const pages = ['home', 'projects', 'prds', 'teardowns', 'leadership', 'learning', 'contact'];
 
-    function showPage() {
-      let id = location.hash.slice(1);
-      if (!pages.includes(id)) id = 'home';
+        function showPage() {
+            let id = location.hash.slice(1);
+            const scrollToExplore = id === 'explore';
 
-      document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === id));
-      document.querySelectorAll('.nav-links a').forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-      });
-      window.scrollTo(0, 0);
-    }
+            if (scrollToExplore || !pages.includes(id)) id = 'home';
+
+            document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === id));
+            document.querySelectorAll('.nav-links a').forEach(a => {
+              a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+            });
+
+            if (scrollToExplore) {
+              document.getElementById('explore').scrollIntoView({ behavior: 'smooth' });
+            } else {
+              window.scrollTo(0, 0);
+            }
+          }
 
     window.addEventListener('hashchange', showPage);
     showPage();
@@ -2091,6 +2101,11 @@
       caption.textContent = slides[i].dataset.caption || '';
       current = i;
     }
+        document.querySelector('a[href="#explore"]').addEventListener('click', e => {
+            e.preventDefault();
+            history.replaceState(null, '', '#home');
+            document.getElementById('explore').scrollIntoView({ behavior: 'smooth' });
+          });
 
     setInterval(() => showSlide((current + 1) % slides.length), 3000);
   </script>
