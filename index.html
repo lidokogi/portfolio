@@ -603,6 +603,13 @@
       border-radius: 3px;
     }
 
+    .shuttle-badges { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .shuttle-badge-right { transform: none; margin: 0; }
+    .shuttle-hero .shuttle-text-grid { margin-top: 0; }
+    .shuttle-hero .shuttle-text-grid .bp-responsibilities { margin-top: 0; }
+    .shuttle-text-grid .shuttle-role,
+    .shuttle-text-grid .key-features-label { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+
     .phone-caption {
       margin-top: 0.6rem;
       font-size: 0.76rem;
@@ -1228,6 +1235,8 @@
       
     }
 
+      .shuttle-badge { margin-top: 0.75rem; }
+
       .reading-layout > div:first-child { grid-template-columns: 1fr; gap: 0.75rem; }
       .book-row { padding: 1.25rem; }
 
@@ -1236,6 +1245,13 @@
       }
       .shuttle-links-desktop { display: none; }
       .shuttle-links-mobile { display: flex; justify-content: center; margin: 1.25rem 0 0; }
+      .shuttle-hero .shuttle-links-desktop { justify-content: center; margin: 1.25rem 0; }
+
+    .shuttle-action-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 1.25rem 0; }
+    .shuttle-action-row .shuttle-links-desktop { margin: 0; justify-content: flex-start; }
+    .shuttle-action-row .shuttle-badges { margin: 0; justify-content: flex-end; }
+    .shuttle-top { width: fit-content; max-width: 100%; }
+
       .hamburger {
         display: flex;
         flex-direction: column;
@@ -1469,6 +1485,16 @@
         font-size: clamp(34px, 9vw, 50px);
       }
     }
+    .shuttle-top { width: 100%; }
+    .shuttle-top .shuttle-action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: center; margin: 1.25rem 0; }
+    .shuttle-top .shuttle-action-row .shuttle-links { margin: 0; }
+    .shuttle-top .shuttle-action-row .shuttle-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; padding-left: calc(3rem + 1px); }
+    .shuttle-top .shuttle-badge-right { transform: none; margin: 0; }
+
+    @media (max-width: 900px) {
+      .shuttle-top .shuttle-action-row { display: flex; margin: 1rem 0; }
+      .shuttle-top .shuttle-action-row .shuttle-badges { padding-left: 0; }
+    }
   </style>
 </head>
 
@@ -1591,14 +1617,28 @@
       <div class="shuttle-hero">
 
         <div>
-          <div class="shuttle-title-row">
-            <div class="shuttle-heading">SOLO PROJECT: UAlbany Shuttle Tracker</div>
-            <div class="shuttle-badge">Beta Tested</div>
+          <div class="shuttle-top">
+            <div class="shuttle-title-row">
+              <div class="shuttle-heading">SOLO PROJECT: UAlbany Shuttle Tracker</div>
+            </div>
+
+            <div class="shuttle-action-row">
+              <div class="shuttle-links shuttle-links-desktop">
+                <a href="https://daffy-carrot-d1e.notion.site/UAlbany-Shuttle-Tracker-37b88b501c828043a470ed00e8d21efa?source=copy_link" target="_blank" class="prd-open-btn">Read the full PRD ↗&#xFE0E;</a>
+                <a href="https://daffy-carrot-d1e.notion.site/shuttle-app-build-and-decision-log-38588b501c828023ace2de62c127131c?source=copy_link" target="_blank" class="prd-open-btn">Read the build log ↗&#xFE0E;</a>
+              </div>
+
+              <div class="shuttle-badges">
+                <div class="shuttle-badge">Beta Tested</div>
+                <div class="shuttle-badge-right">React Native · Expo</div>
+              </div>
+            </div>
           </div>
-          <div class="shuttle-role">Product & Engineering</div>
+                    
 
           <div class="shuttle-text-grid">
             <div>
+              <div class="shuttle-role">Product & Engineering</div>
               <p class="shuttle-desc">Every day, UAlbany students plan their lives around a shuttle they can’t see. The
                 official schedule is a static page: no live location, no real ETA, and no way to know if your shuttle
                 already left or is running late. So I’m building what it should have been, a Google Maps for my school’s
@@ -1609,10 +1649,11 @@
             </div>
 
             <div class="bp-responsibilities">
-              <div class="shuttle-badge-right">React Native · Expo</div>
               <div class="shuttle-role key-features-label">Key Features · Core Experience</div>
               <div class="bp-resp-list">
                 <div class="bp-resp-item">Live shuttle position on an interactive map, refreshed every 30 seconds</div>
+                <div class="bp-resp-item">Saved locations and recent searches, so the trips you take every day are one tap away
+                </div>
                 <div class="bp-resp-item">Trip planner that ranks shuttle + walking route combinations by total time
                 </div>
                 <div class="bp-resp-item">Shuttle status that updates as it approaches (arriving, arrived, departed), so you always know whether you’ve missed it or not</div>
@@ -1620,12 +1661,6 @@
                   progresses</div>
                 <div class="bp-resp-item">Live ETA overlay on full schedules, with weekday/weekend auto-detection</div>
                 <div class="bp-resp-item">Push notification when the shuttle is about 5 minutes from your stop</div>
-                <div class="shuttle-links shuttle-links-desktop">
-                  <a href="https://daffy-carrot-d1e.notion.site/UAlbany-Shuttle-Tracker-37b88b501c828043a470ed00e8d21efa?source=copy_link"
-                    target="_blank" class="prd-open-btn">Read the full PRD ↗&#xFE0E;</a>
-                  <a href="https://daffy-carrot-d1e.notion.site/shuttle-app-build-and-decision-log-38588b501c828023ace2de62c127131c?source=copy_link"
-                    target="_blank" class="prd-open-btn">Read the build log ↗&#xFE0E;</a>
-                </div>
               </div>
             </div>
           </div>
