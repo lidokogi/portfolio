@@ -209,7 +209,7 @@
     .hero {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 3.5rem 3rem 2rem;
+      padding: 2.5rem 3rem 2rem;
     }
 
     .hero-content {
@@ -256,11 +256,12 @@
     }
 
     .hero-desc {
-      max-width: 420px;
+      max-width: 450px;
       color: var(--muted2);
       font-size: 0.95rem;
       line-height: 1.75;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1rem;
+      margin-top: 0rem;
     }
 
     .hero-ctas { flex-wrap: nowrap; gap: 0.5rem; }
@@ -1338,6 +1339,7 @@
         grid-template-columns: 1fr;
         gap: 1.25rem;
         text-align: center;
+        margin-bottom: 1rem;
       }
 
       .hero-headshot {
@@ -1358,6 +1360,8 @@
       .hero-desc {
         display: none;
       }
+
+      .hero-desc.hero-roles { display: block; font-size: 0.9rem; margin: 0 auto 1.25rem; text-align: center;}
 
       .explore {
         padding-top: 1rem;
@@ -1521,14 +1525,14 @@
     <div class="hero">
       <div class="hero-content">
         <div>
-          <div class="hero-eyebrow">• Product and Technology Portfolio •</div>
           <h1>
             <span class="line">Building toward</span>
-            <span class="line" style="animation-delay: 0.3s">product and solutions,</span>
+            <span class="line" style="animation-delay: 0.3s">product & engineering,</span>
             <em class="line" style="animation-delay: 0.6s">in public.</em>
           </h1>
-          <p class="hero-desc">Documenting my journey across product and technical solutions as I build the technical depth, customer empathy, and
-          judgment to turn complex problems into meaningful solutions people rely on.</p>
+          <p class="hero-desc">Documenting my journey as I build the technical depth, customer empathy, and judgment to turn complex problems into
+          solutions people rely on.</p>
+          <p class="hero-desc hero-roles">Working toward Product Management, <span class="nobreak">Solutions/Sales Engineering</span>, and adjacent technical roles.</p>
           <div class="hero-ctas">
             <a href="#explore" class="btn-solid">See my work</a>
             <a href="#contact" class="btn-outline">Let's connect</a>
@@ -1549,7 +1553,7 @@
 
         <a href="#projects" class="card" style="animation-delay: 0.1s">
           <div>
-            <div class="card-tag">Product Execution</div>
+            <div class="card-tag">Technical Execution</div>
             <h3>UAlbany Shuttle Tracker</h3>
             <p>A Google Maps for my school's shuttle bus. </p> <p>Full product lifecycle; I'm taking it from research to launch myself: I surveyed 100+ students, wrote the PRD, built the app, and ran a beta
             with about 25 people.</p>
@@ -2045,7 +2049,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <p>© 2026 Lucille Idokogi - Product and Technology· Graduating Dec 2027</p>
+      <p>© 2026 Lucille Idokogi - Product and Solutions· Graduating Dec 2027</p>
       <ul class="footer-links">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#prds">PRDs</a></li>
